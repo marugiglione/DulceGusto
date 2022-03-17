@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pedidos - Dulce Gusto - Pastelería Artesanal</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bodypedidos">
+	<!-- inicia encabezado -->
+	<header class="header">
+		<nav class="encabezado">
+			<a href="../index.html">
+				<img src="../img/logo.png" alt="logo de dulce gusto">
+			</a>
+			<ul class="botonera">
+				<li>
+					<a href="../html/historia.html">Historia</a>
+				</li>
+				<li>
+					<a href="../html/productos.html">Productos</a>
+				</li>
+				<li>
+					<a href="../html/pedidos.html">Pedidos</a>
+				</li>
+				<li>
+					<a href="../html/clientes.html">Clientes</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- finaliza encabezado -->
+
+	<!-- inicia contenido principal -->
+	<main class="formpresupuesto">
+		<h2 class="pedidos">- PEDÍ TU PRESUPUESTO -</h2>
+		<article>
+			<form action="envio.php" method="post" id="presupuesto">
+				<fieldset class="pedidos__form-datos">
+					<legend>DATOS PERSONALES</legend>
+					<div>
+						<label for="nombre">Nombre y apellido</label>
+						<input type="text" name="nombre" id="nombre"><br>
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email">
+					</div>
+				</fieldset>
+				<fieldset class="pedidos__form-productos">
+					<legend>PRODUCTOS</legend>
+					<div class="pedidos__form-opcionesprod">
+						<div>
+							<input type="checkbox" value="tortas" id="tortas" name="tortas">
+							<label for="tortas">Tortas</label>
+						</div>
+						<div>
+							<input type="checkbox" value="desayunos" name="desayunos" id="desayunos">
+							<label for="desayunos">Desayunos</label>
+						</div>
+						<div>
+							<input type="checkbox" value="alfajores" name="alfajores" id="alfajores">
+							<label for="alfajores">Alfajores</label>
+						</div>	
+						<div>
+							<input type="checkbox" value="box" name="box" id="box">
+							<label for="box">Box</label>
+						</div>
+					</div>
+					<div class="pedidos__form-codprod">
+						<label for="codigo">Código del producto
+						<p>Si se requiere más de un código, colocar guión entre los mismos. Ejemplo: T001 - B050</p></label> 
+						<input type="codigo" placeholder="Código producto" name="codigo" id="codigo"> 
+					</div>
+				</fieldset>
+				<fieldset class="pedidos__form-entrega">
+					<legend>ENTREGA</legend>
+					<div class="pedidos__form-opcionesent">	
+						<input type="radio" name="pedido" value="domicilio" id="domicilio">
+						<label for="domicilio">Envío a domicilio</label>
+					</div>
+					<div class="pedidos__form-domicilio">
+						<select name="zonas" id="zona">
+							<option value="norte">Alberdi</option>
+							<option value="fisherton">Fisherton</option>
+							<option value="otra">Otra</option>
+						</select>	
+						<label for="direccion"></label>
+						<input type="direccion" placeholder="Dirección" name="direccion" id="direccion">	
+					</div>
+					<div class="pedidos__form-opcionesent">
+						<input type="radio" name="pedido" value="local" id="local">
+						<label for="local">Retiro en el local</label>
+					</div>	
+					<div class="pedidos__form-maps">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.738644972532!2d-60.70840568496769!3d-32.8786337809414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b653b89ecacb8d%3A0x94a58658574f8474!2sVasallo%204005%2C%20S2000%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1644874478259!5m2!1ses-419!2sar" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					</div>
+				</fieldset>
+				<div class="pedidos__mensaje-titulo">
+					<label for="mensaje">Dejá tu mensaje</label>
+					<textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Mensaje"></textarea>
+					<div class="pedidos__mensaje-botones">
+						<input type="submit" value="Enviar">
+						<input type="reset" value="Cancelar">
+					</div>
+				</div>
+			</form>
+		</article>
+	</main>
+	<!-- finaliza contenido principal -->
+
+	<!-- inicia footer -->
+	<footer class="footer">
+		<a href="#contacto" class="footer__contacto--tituloref">
+			<p class="footer__contacto--titulo">CONTACTO</p>
+		</a>
+		<div class="footer__contacto--pie">
+			<section class="footer__contacto--items">
+				<article class="footer__contacto--contenido">
+					<img class="footer__contacto--icono" src="../img/celular.png" alt="celular">
+					<p class="footer__contacto--txt">Celular: 341 3-070985</p>
+				</article>
+				<article class="footer__contacto--contenido">
+					<img class="footer__contacto--icono" src="../img/mail.png" alt="email">
+					<p class="footer__contacto--txt">Email: dulcegusto@gmail.com</p>
+				</article>
+				<article class="footer__contacto--contenido">
+					<img class="footer__contacto--icono" src="../img/ubicacion.png" alt="ubicacion">
+					<p class="footer__contacto--txt">Ubicación: Vasallo 4005, Rosario</p>
+				</article>
+				<article class="footer__contacto--contenido">
+					<img class="footer__contacto--icono" src="../img/instagram.png" alt="instagram">
+					<p class="footer__contacto--txt">Instagram: @dg_tortas</p>
+				</article>
+			</section>
+			<section class="footer__novedades-box">
+				<img class="footer__novedades-logo" src="../img/logocompleto.png" alt="logo">
+				<article class="footer__novedades-novedades">	
+					<p>Recibí novedades</p>
+					<form action="envio.php" method="post" id="contacto">
+						<label for="email"></label>
+						<input type="email" placeholder="Email" name="email" id="email">
+					</form>
+				</article>
+			</section>
+		</div>
+	</footer>
+	<!-- finaliza footer -->
+</body>
+</html>
