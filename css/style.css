@@ -1,6 +1,6 @@
 /* communs styles */
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Raleway:ital,wght@1,500&family=Roboto:wght@300;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Raleway:ital,wght@1,500&family=Roboto+Serif:ital,wdth,wght@0,99.6,392;1,99.6,738&family=Roboto:wght@300;700&display=swap');
 *{
 	box-sizing: border-box; 
 	font-family: 'Roboto';
@@ -13,6 +13,16 @@ body {
 #navBg {
 	background-color: rgba(161, 247, 217, 0.8);	
 }
+.navItems{
+	background-image: linear-gradient(currentColor, currentColor);
+	background-position: 10% 90%;
+	background-repeat: no-repeat;
+	background-size: 0% 2px;
+	transition: background-size .3s;
+} 
+	.navItems:hover {
+		background-size: 90% 2px;
+	}
 
 /* footer style */
 .footerBg {
@@ -31,8 +41,40 @@ body {
 }
 
 /* -----> index styles <----- */
+.imgPpal {
+	position:relative;
+	display: inline-block;
+	text-align: center;
+}
+	.txtImg1 {
+		position: absolute;
+		top: 4%;
+		left: 5%;
+		color: white;
+		font-size: 5vw;
+		font-family: 'Roboto+Serif:ital,wdth,wght@0,99.6,392';
+	}
+	.txtImg2 {
+		position: absolute;
+		top: 15%;
+		left: 8%;
+		color: white;
+		font-size: 8vw;
+		font-family: 'Roboto Serif';
+		font-weight: 1,99.6,738;
+		font-style: italic;
+	}
+	.txtImg3 {
+		position: absolute;
+		top: 31%;
+		left: 5%;
+		color: white;
+		font-size: 6vw;
+		font-family: 'Roboto+Serif:ital,wdth,wght@0,99.6,392';
+	}
 .textTitulo {
 	font-family: 'Raleway';
+	background-repeat: repeat;
 }
 .paddingStart {
 	margin-left: 6.25%;
@@ -44,8 +86,13 @@ body {
 }
 .historiaBg {
 	background-color: rgba(255, 255, 255, 0.279);
-	
 }
+.imgHistoria {
+	
+	box-shadow: 0px 0px 6px 5px rgba(138, 201, 192, 0.5);
+}
+
+
 
 
 
