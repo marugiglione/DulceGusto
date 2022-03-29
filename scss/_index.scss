@@ -1,0 +1,46 @@
+
+body {
+	background-color: $colorBody;
+}
+.imgPpal {
+	position:relative;
+	display: inline-block;
+	text-align: center;
+    width: $w-100;
+    img {
+        width: $w-100;
+        div {
+            width: $w-100;
+        }
+    }
+}
+.txtImg1 {
+    @include position(absolute, 4%, 5%);
+    font-family: $fontUno;
+    font-size: 5vw;
+}
+.txtImg2 {
+    @include position(absolute, 15%, 8%);
+    font-family: $fontDos;
+    font-size: 8vw;
+    font-weight: 1,99.6,738;
+	font-style: italic;
+}
+.txtImg3 {
+    @include position(absolute, 31%, 5%);
+    font-family: $fontUno;
+    font-size: 6vw;
+}
+.textTitulo {
+    font-family: $fontTitle;
+}
+.carousel {
+    div {
+        div {
+            img {
+                margin-left: 6.25%;
+                width: $w-25;
+            }
+        }
+    }
+}

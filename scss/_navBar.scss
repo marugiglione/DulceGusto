@@ -1,0 +1,13 @@
+#navBg {
+    background-color:$colorNav;
+}
+.navItems {
+    background-image: linear-gradient(currentColor, currentColor);
+	background-position: 10% 90%;
+	background-repeat: no-repeat;
+	background-size: 0% 2px;
+	transition: background-size .3s;
+    &:hover{
+        background-size: 90% 2px;
+    }
+}

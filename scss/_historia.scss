@@ -1,0 +1,16 @@
+.conteiner-fluid {
+    div {
+        img {
+            width: $w-50;
+            box-shadow: 0px 0px 6px 5px rgba(138, 201, 192, 0.5);
+        }
+    }
+    div {
+        p {
+            text-align: justify;
+        }
+    }
+}
+.historiaBg {
+    background-color: $colorTxt;
+}

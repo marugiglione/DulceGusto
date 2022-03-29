@@ -1,0 +1,17 @@
+//variables: colors
+$colorBody: rgba(213,248,236,.9);
+$colorNav:rgba(161, 247, 217, 0.8);
+$colorTxt: rgba(255, 255, 255, 0.496);
+
+//variables: sizing
+$w-25: 25%;
+$w-50: 50%;
+$w-75: 75%;
+$w-100: 100%;
+
+@mixin position($position, $top, $left){
+    position: $position;
+    top: $top;
+    left: $left;
+    color: white;
+}
