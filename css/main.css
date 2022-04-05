@@ -12,7 +12,10 @@
     background-size: 90% 2px; }
 
 body {
-  background-color: rgba(213, 248, 236, 0.9); }
+  background-color: rgba(213, 248, 236, 0.9);
+  box-sizing: border-box; }
+  body h2 {
+    font-family: "Raleway"; }
 
 .imgPpal {
   position: relative;
@@ -28,17 +31,17 @@ body {
   position: absolute;
   top: 4%;
   left: 5%;
-  color: white;
   font-family: "Roboto+Serif:ital,wdth,wght@0,99.6,392";
-  font-size: 5vw; }
+  font-size: 5vw;
+  color: white; }
 
 .txtImg2 {
   position: absolute;
   top: 15%;
   left: 8%;
-  color: white;
   font-family: "Roboto Serif";
   font-size: 8vw;
+  color: white;
   font-weight: 1,99.6,738;
   font-style: italic; }
 
@@ -46,16 +49,178 @@ body {
   position: absolute;
   top: 31%;
   left: 5%;
-  color: white;
   font-family: "Roboto+Serif:ital,wdth,wght@0,99.6,392";
-  font-size: 6vw; }
-
-.textTitulo {
-  font-family: "Raleway"; }
+  font-size: 6vw;
+  color: white; }
 
 .carousel div div img {
   margin-left: 6.25%;
   width: 25%; }
+
+.conteiner-fluid div img {
+  width: 50%;
+  box-shadow: 0px 0px 6px 5px rgba(138, 201, 192, 0.5); }
+
+.conteiner-fluid div p {
+  text-align: justify; }
+
+.historiaBg {
+  background-color: rgba(255, 255, 255, 0.496); }
+
+#form__pedidos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  padding: 10px 5%;
+  grid-template-areas: "datos" "productos" "entrega" "solicitar";
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 2em;
+  text-align: center; }
+  #form__pedidos fieldset {
+    border-style: groove;
+    border-width: 2px;
+    border-color: threedface;
+    border-image: initial; }
+    #form__pedidos fieldset legend {
+      float: none;
+      width: auto;
+      padding-inline: 20px; }
+
+.form__pedidos--datos {
+  grid-area: datos;
+  padding-bottom: 3%;
+  margin-bottom: 5%; }
+  .form__pedidos--datos div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+
+.completar, .form__pedidos--productos span input, .form__pedidos--solicitar div textarea {
+  text-align: center;
+  width: 50%;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
+.form__pedidos--productos {
+  grid-area: productos;
+  padding-bottom: 3%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  .form__pedidos--productos div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 75%; }
+    .form__pedidos--productos div div {
+      width: 50%; }
+
+.form__pedidos--entrega {
+  grid-area: entrega;
+  padding-bottom: 3%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  .form__pedidos--entrega div {
+    padding-bottom: 2%; }
+    .form__pedidos--entrega div iframe {
+      width: 100%;
+      border-radius: 0.60rem; }
+
+.form__pedidos--solicitar {
+  grid-area: solicitar;
+  padding-bottom: 3%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  .form__pedidos--solicitar div {
+    width: 100%; }
+    .form__pedidos--solicitar div textarea {
+      margin-bottom: 5%; }
+
+.btn {
+  color: #212529;
+  background-clip: padding-box;
+  border: 1px solid grey;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin: 10px; }
+  .btn:hover {
+    color: #198754;
+    border-color: #198754;
+    background-color: rgba(255, 255, 255, 0.496); }
+
+@media screen and (min-width: 768px) {
+  #form__pedidos {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: ". datos ." ". productos ." ". entrega ." ". solicitar ."; } }
+
+@media screen and (min-width: 1024px) {
+  #form__pedidos {
+    grid-template-columns: 1fr .1fr 1fr;
+    grid-template-areas: "datos . entrega" "productos . entrega" "solicitar solicitar solicitar"; } }
+
+.main__clientes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; }
+
+.clientes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  text-align: center; }
+  .clientes img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px; }
+  .clientes ul {
+    list-style: none;
+    padding-left: 0px;
+    font-size: 1em; }
+
+@media screen and (min-width: 768px) {
+  main {
+    align-items: flex-start;
+    align-content: center; }
+  .clientes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+    width: 700px;
+    border: double; }
+    .clientes h3, .clientes ul {
+      padding-left: 20px;
+      padding-right: 10px; } }
 
 .footerBg {
   background-image: url(../img/fondo5.jpg);
@@ -70,13 +235,3 @@ body {
 
 .footerLogo {
   width: 200px; }
-
-.conteiner-fluid div img {
-  width: 50%;
-  box-shadow: 0px 0px 6px 5px rgba(138, 201, 192, 0.5); }
-
-.conteiner-fluid div p {
-  text-align: justify; }
-
-.historiaBg {
-  background-color: rgba(255, 255, 255, 0.496); }

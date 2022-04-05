@@ -9,9 +9,34 @@ $w-50: 50%;
 $w-75: 75%;
 $w-100: 100%;
 
-@mixin position($position, $top, $left){
+//map: paleta de colores
+$paleta: (
+    'color_1': rgba(161, 247, 217, 0.8),
+    'color_2': rgba(213,248,236,.9),
+    'color_3': rgba(255, 255, 255, 0.496),
+    'color_4': #212529,
+    'color_5': #198754,
+    'color_6': grey,);
+
+
+//mixing
+@mixin text($font-size, $line-height, $text-align){
+    font-size: $font-size;
+    line-height: $line-height;
+    text-align: $text-align;
+}
+@mixin position($position, $top, $left, $font-family, $font-size){
     position: $position;
     top: $top;
     left: $left;
+    font-family: $font-family;
+    font-size: $font-size;
     color: white;
+}
+@mixin flex($direction, $wrap, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
 }

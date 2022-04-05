@@ -1,0 +1,211 @@
+
+// --> style: index.html <-- //
+body {
+	background-color: map-get($map:$paleta,$key:'color_2');
+    box-sizing: border-box;
+    h2 {
+        font-family: $fontTitle;
+    }
+}
+.imgPpal {
+	position:relative;
+	display: inline-block;
+	text-align: center;
+    width: $w-100;
+    img {
+        width: $w-100;
+        div {
+            width: $w-100;
+        }
+    }
+}
+.txtImg1 {
+    @include position(absolute, 4%, 5%, $fontUno, 5vw);
+}
+.txtImg2 {
+    @include position(absolute, 15%, 8%, $fontDos, 8vw);
+    font-weight: 1,99.6,738;
+	font-style: italic;
+}
+.txtImg3 {
+    @include position(absolute, 31%, 5%, $fontUno, 6vw);
+}
+.carousel {
+    div {
+        div {
+            img {
+                margin-left: 6.25%;
+                width: $w-25;
+            }
+        }
+    }
+}
+
+// --> style: historia.html <-- //
+.conteiner-fluid {
+    div {
+        img {
+            width: $w-50;
+            box-shadow: 0px 0px 6px 5px rgba(138, 201, 192, 0.5);
+        }
+    }
+    div {
+        p {
+            text-align: justify;
+        }
+    }
+}
+.historiaBg {
+    background-color: map-get($map:$paleta,$key:'color_3');
+}
+
+// --> style: pedidos.html <-- //
+#form__pedidos {
+    display: grid;
+    grid-template-columns: 1fr;
+	grid-template-rows: auto;
+    width: $w-100;
+    padding: 10px 5%;
+	grid-template-areas: "datos" "productos" "entrega" "solicitar";
+    font-family: $fontMain;
+    @include text(1em, 2em, center);
+    fieldset {
+        border-style: groove;
+        border-width: 2px;
+        border-color: threedface;
+        border-image: initial;
+        legend {
+            float: none;
+            width: auto;
+            padding-inline: 20px;
+        }
+    }
+}
+.form__pedidos--datos {
+    grid-area: datos;
+    padding-bottom: 3%;
+    margin-bottom: 5%;
+    div {
+        @include flex(column, wrap, center, center);
+    }
+}
+    .completar {
+        text-align: center;
+        width: $w-50;
+        color: map-get($map:$paleta,$key:'color_4');
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+.form__pedidos--productos {
+    grid-area: productos;
+    padding-bottom: 3%;
+    margin-bottom: 5%;
+    @include flex(column, wrap, center, center);
+    div {
+        @include flex(row, wrap, center, center);
+        width: $w-75;
+        div {
+            width: $w-50;
+        }
+    }
+    span {
+        input {
+            @extend .completar;
+        }
+    }
+}
+.form__pedidos--entrega {
+    grid-area: entrega;
+    padding-bottom: 3%;
+    margin-bottom: 5%;
+    @include flex(column, wrap, center, center);
+    div {
+        padding-bottom: 2%;
+        iframe {
+            width: $w-100;
+            border-radius: 0.60rem;
+        }
+    }
+}
+.form__pedidos--solicitar {
+    grid-area: solicitar;
+    padding-bottom: 3%;
+    margin-bottom: 5%;
+    @include flex(column, wrap, center, center);
+    div {
+        width: $w-100;
+        textarea {
+            @extend .completar;
+            margin-bottom: 5%;
+        }
+    }
+}
+.btn {
+    color: map-get($map:$paleta,$key:'color_4');
+    background-clip: padding-box;
+    border: 1px solid map-get($map:$paleta,$key:'color_6');
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 10px;
+    &:hover{
+        color: map-get($map:$paleta,$key:'color_5');
+        border-color: map-get($map:$paleta,$key:'color_5');
+        background-color: map-get($map:$paleta,$key:'color_3');
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #form__pedidos {
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas: ". datos ." ". productos ." ". entrega ." ". solicitar .";
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #form__pedidos {
+        grid-template-columns: 1fr .1fr 1fr;
+        grid-template-areas: "datos . entrega" "productos . entrega" "solicitar solicitar solicitar";
+    }
+}
+
+// --> style: clientes.html <-- //
+.main__clientes {
+    @include flex(column, wrap, center, center);
+    box-sizing: border-box;
+}
+.clientes {
+    @include flex(column, wrap, center, center);
+    margin: 20px;
+    text-align: center;
+    img {
+        width: 150px;
+        height: 150px;
+		object-fit: cover;
+        margin: 10px;
+    }
+    ul {
+        list-style: none;
+        padding-left: 0px;
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        align-items: flex-start;
+        align-content: center;
+    }
+    .clientes {
+        @include flex(row, nowrap, flex-start, center);
+        text-align: start;
+        width: 700px;
+        border: double;
+        h3, ul {
+            padding-left: 20px;
+			padding-right: 10px;
+        }
+    }
+}

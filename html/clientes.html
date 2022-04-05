@@ -3,8 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Clientes - Dulce Gusto - Pastelería Artesanal</title>
-	<link rel="stylesheet" href="../css/style.css">
+	<title>Dulce Gusto | Clientes - Envíos a Rosario</title>
+    <meta name="description" content="Clientes destacados. Sumate como cliente particular!">
+    <meta name="keywords" content="Pastelería, torta, porcione, desayuno, budín, tortas personalizadas, huevo de pascuas, alfajores, alfajor de maicena, alfacookies, delibery, rosario, dulce, postres, cheescake, brownie, oreo, lemon pie.">
+    <meta name="author" content="Marianella Giglione">
+    <meta name="copyright" content="Dulce Gusto SA">
+    <meta name="robots" content="index, follow">
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Style CSS -->
+  	<link rel="stylesheet" href="../css/main.css">
+	<!-- Style WOW -->
 	<link rel="stylesheet" href="../css/animate.css">
 	<script src="../js/wow.min.js"></script>
     <script>
@@ -12,125 +21,130 @@
     </script>
 </head>
 <body class="bodyclientes">
-	<!-- inicia encabezado -->
-	<header class="header">
-		<nav class="encabezado">
-			<a href="../index.html">
-				<img src="../img/logo.png" alt="logo de dulce gusto">
+	<!-- inicia nav -->
+    <nav class="navbar navbar-expand-md sticky-top navbar-light " id="navBg">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="../index.html">
+				<img src="../img/logo.PNG" alt="logo de dulce gusto" class="w-50">
 			</a>
-			<ul class="botonera">
-				<li>
-					<a href="../html/historia.html">Historia</a>
-				</li>
-				<li>
-					<a href="../html/productos.html">Productos</a>
-				</li>
-				<li>
-					<a href="../html/pedidos.html">Pedidos</a>
-				</li>
-				<li>
-					<a href="../html/clientes.html">Clientes</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<!-- finaliza encabezado -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-3 mb-lg-0">
+					<li class="nav-item navItems">
+						<a class="nav-link fs-5 me-3" aria-current="page" href="../html/historia.html">Historia</a>
+					</li>
+					<li class="nav-item navItems">
+						<a class="nav-link fs-5 me-3" href="#../html/productos.html">Productos</a>
+					</li>
+					<li class="nav-item navItems">
+						<a class="nav-link fs-5 me-3" href="../html/pedidos.html">Pedidos</a>
+					</li>                    
+					<li class="nav-item navItems">
+						<a class="nav-link fs-5 me-4" href="../html/clientes.html">Clientes</a>
+					</li>
+				</ul>
+		  </div>
+		</div>
+	</nav>
+	<!-- finaliza nav -->
 	<!-- titulo -->
-	<section class="clientestitulo">
-		<h2>- CLIENTES FELICES -</h2>
+	<section>
+		<h2 class="text-center mt-4">- CLIENTES DISTINGUIDOS -</h2>
 	</section>		
 	<!-- inicia contenido principal -->
-	<main class="mainclientes">
+	<main class="main__clientes">
 		<article class="clientes">
-			<div class="clientes__datos-datos">
-				<img class="clientes__datos-logo" src="../img/salon.jpg" alt="cliente1">
+			<div>
+				<img src="../img/salon.jpg" alt="acantilados">
 			</div>
-			<div class="clientes__datos-info">
+			<div>
 				<h3>SALÓN LOS ACANTILADOS</h3>
 				<ul>
 					<li>Teléfono: 3476 422-380</li>
 					<li>Ubicación: Dr. Ghío 205, San Lorenzo, Santa Fe, Argentina</li>
-					<li>Web: <a href="https://www.marioguerrero.com.ar/" target="_blank">www.marioguerrero.com.ar</a></li>
+					<li>Web: <a href="https://www.marioguerrero.com.ar/" rel="nofollow" target="_blank">www.marioguerrero.com.ar</a></li>
 				</ul>
 			</div>
 		</article>
 		<article class="clientes">
-			<div class="clientes__datos-datos">
-				<img class="clientes__datos-logo" src="../img/wilfredo.PNG" alt="cliente2">
+			<div>
+				<img src="../img/wilfredo.PNG" alt="wilfredo">
 			</div>
-			<div class="clientes__datos-info">
+			<div>
 				<h3>WILFREDO RESTO BAR</h3>
 				<ul>
 					<li>Teléfono: 341 430-1386/87, 341 6-163917</li>
 					<li>Ubicación: AV. Francia Esq. Mendoza, Rosario, Santa Fe, Argentina</li>
-					<li>Web: <a href="http://wilfredo.com.ar/" target="_blank">wilfredo.com.ar</a> </li>
+					<li>Web: <a href="http://wilfredo.com.ar/" rel="nofollow" target="_blank">wilfredo.com.ar</a> </li>
 				</ul>
 			</div>
 		</article>
 		<article class="clientes">
-			<div class="clientes__datos-datos">
-				<img class="clientes__datos-logo" src="../img/puertopichon.PNG" alt="cliente3">
+			<div>
+				<img src="../img/puertopichon.PNG" alt="puertopichon">
 			</div>
-			<div class="clientes__datos-info">
+			<div>
 				<h3>PUERTO PICHÓN</h3>
 				<ul>
 					<li>Teléfono: 0341 454-6803</li>
 					<li>Ubicación: Pedro León Gallo 185, Rosario, Santa Fe, Argentina</li>
-					<li>Web: <a href="https://www.instagram.com/puertopichon/?hl=es" target="_blank">www.instagram.com/puertopichon</a> </li>
+					<li>Web: <a href="https://www.instagram.com/puertopichon/?hl=es" rel="nofollow" target="_blank">www.instagram.com/puertopichon</a> </li>
 				</ul>
 			</div>
 		</article>
 		<article class="clientes">
-			<div class="clientes__datos-datos">
-				<img class="clientes__datos-logo" src="../img/pavlova.PNG" alt="cliente4">
+			<div>
+				<img src="../img/pavlova.PNG" alt="pavlova">
 			</div>
-			<div class="clientes__datos-info">
-			<h3>PAVLOVA</h3>
-			<ul>
-				<li>Teléfono: 0341 3-610651</li>
-				<li>Ubicación: Moreno 338, Ibarlucea, Santa Fe, Argentina</li>
-				<li>Web: <a href="https://www.instagram.com/papasbravas.ibarlucea/" target="_blank">www.instagram.com/papasbravas.ibarlucea</a></li>
-			</ul>
+			<div>
+				<h3>PAVLOVA</h3>
+				<ul>
+					<li>Teléfono: 0341 3-610651</li>
+					<li>Ubicación: Moreno 338, Ibarlucea, Santa Fe, Argentina</li>
+					<li>Web: <a href="https://www.instagram.com/papasbravas.ibarlucea/" rel="nofollow" target="_blank">instagram.com/papasbravas.ibarlucea</a></li>
+				</ul>
 			</div>
 		</article>
 	</main>
 	<!-- finaliza contenido principal -->
 	<!-- inicia footer -->
-	<footer class="footer">
-		<a href="#contacto" class="footer__contacto--tituloref">
-			<p class="footer__contacto--titulo">CONTACTO</p>
-		</a>
-		<div class="footer__contacto--pie">
-			<section class="footer__contacto--items">
-				<article class="footer__contacto--contenido">
-					<img class="footer__contacto--icono" src="../img/celular.png" alt="celular">
-					<p class="footer__contacto--txt">Celular: 341 3-070985</p>
+	<div class="container-fluid footerBg">
+		<h3 class="ps-5 pt-1 mt-2 fs-5 fw-bold">CONTACTO</h3>
+		<div class="row">
+			<section class="col-md-8">
+				<article class="d-inline-flex flex-nowrap w-100 align-items-baseline">
+					<img src="../img/celular.png" alt="celular" class="footerImg">
+					<p class="fs-6">Celular: 341 3-070985</p>
 				</article>
-				<article class="footer__contacto--contenido">
-					<img class="footer__contacto--icono" src="../img/mail.png" alt="email">
-					<p class="footer__contacto--txt">Email: dulcegusto@gmail.com</p>
+				<article class="d-inline-flex flex-nowrap w-100 align-items-baseline">
+					<img src="../img/mail.png" alt="email" class="footerImg">
+					<p class="fs-6">Email: dulcegusto@gmail.com</p>
 				</article>
-				<article class="footer__contacto--contenido">
-					<img class="footer__contacto--icono" src="../img/ubicacion.png" alt="ubicacion">
-					<p class="footer__contacto--txt">Ubicación: Vasallo 4005, Rosario</p>
+				<article class="d-inline-flex flex-nowrap w-100 align-items-baseline">
+					<img src="../img/ubicacion.png" alt="ubicacion" class="footerImg">
+					<p class="fs-6">Ubicación: Vasallo 4005, Rosario</p>
 				</article>
-				<article class="footer__contacto--contenido">
-					<img class="footer__contacto--icono" src="../img/instagram.png" alt="instagram">
-					<p class="footer__contacto--txt">Instagram: @dg_tortas</p>
+				<article class="d-inline-flex flex-nowrap w-100 align-items-baseline">
+					<img src="../img/instagram.png" alt="instagram" class="footerImg">
+					<p class="fs-6">Instagram: @dg_tortas</p>
 				</article>
 			</section>
-			<section class="footer__novedades-box">
-				<img class="footer__novedades-logo" src="../img/logocompleto.png" alt="logo">
-				<article class="footer__novedades-novedades">	
-					<p>Recibí novedades</p>
-					<form action="envio.php" method="post" id="contacto">
-						<label for="email"></label>
-						<input type="email" placeholder="Email" name="email" id="email">
-					</form>
-				</article>
+			<section class="col-md-4 d-flex flex-column align-items-center justify-content-center">
+				<img src="../img/logocompleto.PNG" alt="logo" class="footerLogo">
+				<p class="my-2 fs-5 fw-bold">Recibí novedades</p>
+				<form action="envio.php" method="post" class="d-flex align-items-start">
+					<label for="email" class="form-label"></label>
+					<input type="email" class="form-control form-control-sm w-100" placeholder="Email">
+				</form>
 			</section>
 		</div>
-	</footer>
+	</div>  
 	<!-- finaliza footer -->
+
+	<!-- Optional JavaScript -->
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
