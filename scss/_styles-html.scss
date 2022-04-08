@@ -199,7 +199,7 @@ body {
         align-content: center;
     }
     .clientes {
-        @include flex(row, nowrap, flex-start, center);
+        @include flex(row, auto, auto, auto);
         text-align: start;
         width: 700px;
         border: double;
@@ -207,5 +207,90 @@ body {
             padding-left: 20px;
 			padding-right: 10px;
         }
+    }
+}
+
+// --> style: productos.html <-- //
+.productos__presentacion {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: $w-100;
+    margin-top: 2%;
+    grid-template-areas: "filtro" "opciones" "volver";
+}
+.productos__filtro {
+    grid-area: filtro;
+}
+.productos__opciones {
+    grid-area: opciones;
+}
+.volver {
+    grid-area: volver;
+}
+.productos__filtro {
+    text-align: center;
+	font-size: 1rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
+    ul {
+        background-color: map-get($map:$paleta,$key:'color_3');
+        border-radius: 0.30rem;
+        border-style: groove;
+        border-width: 2px;
+        border-color: threedface;
+        border-image: initial;
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+                list-style: none;
+                color: black;
+                &:hover{
+                color: map-get($map:$paleta,$key:'color_5');
+                }
+            }   
+        }
+    }
+}
+
+
+.card {
+    margin: 2%;
+    img {
+        margin-top: 0.75rem;
+        border-bottom-right-radius: calc(0.25rem - 1px);
+        border-bottom-left-radius: calc(0.25rem - 1px);
+    }
+}
+.card-desayunos {
+    padding-inline: 20px;
+    img {
+        width: $w-40;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .productos__presentacion {
+        grid-template-columns: 1fr 6fr 1fr;
+        grid-template-areas: "filtro opciones volver";
+    }
+    .card {
+        width: $w-40;
+    }
+    .card-desayunos {
+        width: $w-75;
+    }
+    .productos__filtro {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        width: $w-25;
+    }
+    .card-desayunos {
+        width: $w-50;
     }
 }

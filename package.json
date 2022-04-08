@@ -1,7 +1,7 @@
 {
   "name": "sass",
   "version": "1.0.0",
-  "description": "desafio6",
+  "description": "tercera_entrega_proyecto_final",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

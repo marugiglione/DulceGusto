@@ -212,15 +212,82 @@ body {
   .clientes {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    flex-wrap: auto;
+    justify-content: auto;
+    align-items: auto;
     text-align: start;
     width: 700px;
     border: double; }
     .clientes h3, .clientes ul {
       padding-left: 20px;
       padding-right: 10px; } }
+
+.productos__presentacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  margin-top: 2%;
+  grid-template-areas: "filtro" "opciones" "volver"; }
+
+.productos__filtro {
+  grid-area: filtro; }
+
+.productos__opciones {
+  grid-area: opciones; }
+
+.volver {
+  grid-area: volver; }
+
+.productos__filtro {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .productos__filtro ul {
+    background-color: rgba(255, 255, 255, 0.496);
+    border-radius: 0.30rem;
+    border-style: groove;
+    border-width: 2px;
+    border-color: threedface;
+    border-image: initial; }
+    .productos__filtro ul li {
+      list-style: none; }
+      .productos__filtro ul li a {
+        text-decoration: none;
+        list-style: none;
+        color: black; }
+        .productos__filtro ul li a:hover {
+          color: #198754; }
+
+.card {
+  margin: 2%; }
+  .card img {
+    margin-top: 0.75rem;
+    border-bottom-right-radius: calc(0.25rem - 1px);
+    border-bottom-left-radius: calc(0.25rem - 1px); }
+
+.card-desayunos {
+  padding-inline: 20px; }
+  .card-desayunos img {
+    width: 40%; }
+
+@media screen and (min-width: 768px) {
+  .productos__presentacion {
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas: "filtro opciones volver"; }
+  .card {
+    width: 40%; }
+  .card-desayunos {
+    width: 75%; }
+  .productos__filtro {
+    text-align: left; } }
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 25%; }
+  .card-desayunos {
+    width: 50%; } }
 
 .footerBg {
   background-image: url(../img/fondo5.jpg);
