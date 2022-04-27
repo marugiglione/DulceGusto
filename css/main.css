@@ -1,19 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Raleway:ital,wght@1,500&family=Roboto+Serif:ital,wdth,wght@0,99.6,392;1,99.6,738&family=Roboto:wght@300;700&display=swap");
 #navBg {
   background-color: rgba(161, 247, 217, 0.8); }
+  #navBg a {
+    width: 60%; }
+    #navBg a img {
+      width: 70%; }
+  #navBg button {
+    font-size: 1.1rem; }
 
 .navItems {
   background-image: linear-gradient(currentColor, currentColor);
-  background-position: 10% 90%;
+  background-position: 50% 90%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
   transition: background-size .3s; }
   .navItems:hover {
-    background-size: 90% 2px; }
+    background-size: 20% 2px; }
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #navBg a img {
+    width: 230px; } }
+
+@media screen and (min-width: 768px) {
+  #navBg a img {
+    width: 250px; }
+  .navItems {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 10% 90%; }
+    .navItems:hover {
+      background-size: 90% 2px; } }
 
 body {
   background-color: rgba(213, 248, 236, 0.9);
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px; }
   body h2 {
     font-family: "Raleway"; }
 
@@ -53,19 +74,77 @@ body {
   font-size: 6vw;
   color: white; }
 
-.carousel div div img {
-  margin-left: 6.25%;
-  width: 25%; }
+.carouselContenedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  .carouselContenedor a {
+    margin-bottom: 5%;
+    width: 70%; }
 
-.conteiner-fluid div img {
-  width: 50%;
-  box-shadow: 0px 0px 6px 5px rgba(138, 201, 192, 0.5); }
+#carouselImg {
+  width: 100%;
+  border-radius: 0.25rem; }
 
-.conteiner-fluid div p {
-  text-align: justify; }
+@media screen and (min-width: 576px) {
+  .carouselContenedor {
+    flex-direction: row; }
+    .carouselContenedor a {
+      margin: 3.12%;
+      width: 25%; } }
 
-.historiaBg {
-  background-color: rgba(255, 255, 255, 0.496); }
+.historia {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.historiaImg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-block: 20px; }
+  .historiaImg img {
+    width: 40%;
+    padding: 4px;
+    box-shadow: 0px 0px 6px 5px rgba(138, 201, 192, 0.5); }
+
+.historiaTxt {
+  background-color: rgba(255, 255, 255, 0.496);
+  padding: 20px 40px;
+  margin-inline: 10px;
+  margin-bottom: 20px; }
+  .historiaTxt p {
+    font-size: 1em;
+    text-align: justify; }
+    .historiaTxt p em {
+      font-style: italic;
+      font-size: 1.1em; }
+
+@media screen and (min-width: 768px) {
+  .historiaImg {
+    width: 80%; }
+    .historiaImg img {
+      width: 300px; }
+  .historiaTxt {
+    width: 80%;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; } }
+
+@media screen and (min-width: 1024px) {
+  .historia {
+    flex-direction: row;
+    flex-wrap: nowrap; }
+  .historiaImg img {
+    width: 40%; }
+  .historiaTxt {
+    padding-inline: 20px; } }
 
 #form__pedidos {
   display: grid;
@@ -203,7 +282,7 @@ body {
   .clientes ul {
     list-style: none;
     padding-left: 0px;
-    font-size: 1em; }
+    font-size: 0.9em; }
 
 @media screen and (min-width: 768px) {
   main {
@@ -213,14 +292,18 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: auto;
-    justify-content: auto;
+    justify-content: space-between;
     align-items: auto;
     text-align: start;
     width: 700px;
     border: double; }
     .clientes h3, .clientes ul {
       padding-left: 20px;
-      padding-right: 10px; } }
+      padding-right: 10px; }
+  .clientesInfo {
+    width: 25%; }
+  .clientesInfo {
+    width: 75%; } }
 
 .productos__presentacion {
   display: grid;
@@ -289,16 +372,68 @@ body {
   .card-desayunos {
     width: 50%; } }
 
-.footerBg {
-  background-image: url(../img/fondo5.jpg);
+.errorContenedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: auto;
+  justify-content: center;
+  align-items: center; }
+
+@media screen and (min-width: 768px) {
+  .errorContenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: auto;
+    justify-content: center;
+    align-items: center; } }
+
+.footer {
+  background-image: url(../img/Fondo_Footer.svg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  font-size: 0.8em; }
+
+.footerContenedor1 {
+  text-align: center; }
+  .footerContenedor1 article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start; }
+  .footerContenedor1 a {
+    text-decoration: none;
+    color: black; }
+
+.footerContenedor2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .footerContenedor2 input {
+    height: 38px;
+    margin-top: 10px; }
 
 .footerImg {
   width: 20px;
-  margin-right: 15px;
-  margin-left: 20px; }
+  margin-right: 15px; }
 
 .footerLogo {
   width: 200px; }
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 5%; }
+  .footerContenedor1 article {
+    justify-content: left; } }

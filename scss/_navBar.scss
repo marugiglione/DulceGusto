@@ -1,13 +1,49 @@
 #navBg {
-    background-color:$colorNav;
+    background-color: map-get($map:$paleta,$key:'color_1');
+    a {
+        width: $w-60;
+        img {
+            width: $w-70;
+        }
+    }
+    button {
+        font-size: 1.1rem;
+    }
 }
 .navItems {
     background-image: linear-gradient(currentColor, currentColor);
-	background-position: 10% 90%;
+	background-position: 50% 90%;
 	background-repeat: no-repeat;
 	background-size: 0% 2px;
 	transition: background-size .3s;
     &:hover{
-        background-size: 90% 2px;
+        background-size: 20% 2px;
+    }
+}
+
+@media screen and (min-width: 576px ) and (max-width: 768px) {
+    #navBg {
+        a {
+            img {
+                width: 230px;
+            }
+        } 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #navBg {
+        a {
+            img {
+                width: 250px;
+            }
+        } 
+    }
+    .navItems {
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 10% 90%;
+        &:hover{
+            background-size: 90% 2px;
+        }
     }
 }

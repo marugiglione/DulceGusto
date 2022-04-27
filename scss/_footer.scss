@@ -1,14 +1,46 @@
-.footerBg {
-	background-image: url(../img/fondo5.jpg);
+.footer {
+	background-image: url(../img/Fondo_Footer.svg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+	@include flex(column, wrap, center, center);
+	padding-bottom: 20px;
+	font-size: 0.8em;
+}
+.footerContenedor1 {
+	text-align: center;
+	article {
+		@include flex(row, nowrap, center, flex-start);
+	}
+	a {
+		text-decoration: none;
+		color: black;
+	}
+}
+.footerContenedor2 {
+	@include flex(row, nowrap, center, center);
+	flex-direction: column;
+	input {
+		height: 38px;
+		margin-top: 10px;
+	}
 }
 .footerImg {
 	width: 20px;
 	margin-right: 15px;
-	margin-left: 20px;
 }
 .footerLogo {
 	width: 200px;
+}
+@media screen and (min-width: 768px) {
+	.footer {
+		flex-direction: row;
+		justify-content: space-between;
+		padding-inline: 5%;
+	}
+	.footerContenedor1 {
+		article {
+			justify-content: left;
+		}
+	}
 }

@@ -3,6 +3,8 @@
 body {
 	background-color: map-get($map:$paleta,$key:'color_2');
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
     h2 {
         font-family: $fontTitle;
     }
@@ -30,33 +32,84 @@ body {
 .txtImg3 {
     @include position(absolute, 31%, 5%, $fontUno, 6vw);
 }
-.carousel {
-    div {
-        div {
-            img {
-                margin-left: 6.25%;
-                width: $w-25;
-            }
+.carouselContenedor {
+    @include flex(column, wrap, center, center);
+    a {
+        margin-bottom: 5%;
+        width: $w-70;
+    }
+}
+#carouselImg {
+    width: $w-100;
+    border-radius: 0.25rem;
+}
+
+@media screen and (min-width: 576px) {
+    .carouselContenedor {
+        flex-direction: row;
+        a {
+            margin: 3.12%;
+            width: $w-25;
         }
     }
 }
 
 // --> style: historia.html <-- //
-.conteiner-fluid {
-    div {
-        img {
-            width: $w-50;
-            box-shadow: 0px 0px 6px 5px rgba(138, 201, 192, 0.5);
-        }
-    }
-    div {
-        p {
-            text-align: justify;
-        }
+.historia {
+    @include flex(column, wrap, center, center);
+}
+.historiaImg {
+    @include flex(row, nowrap, space-around, center);
+    margin-block: 20px;
+    img {
+        width: $w-40;
+        padding: 4px;
+        box-shadow: 0px 0px 6px 5px rgba(138, 201, 192, 0.5);
     }
 }
-.historiaBg {
+.historiaTxt {
     background-color: map-get($map:$paleta,$key:'color_3');
+    padding: 20px 40px;
+    margin-inline: 10px;
+    margin-bottom: 20px;
+        p {
+            font-size: 1em;
+            text-align: justify;
+            em {
+                font-style: italic;
+                font-size: 1.1em;
+            }
+        }
+}
+
+@media screen and (min-width: 768px) {
+    .historiaImg {
+        width: $w-80;
+        img {
+            width: 300px;
+        }
+    }
+    .historiaTxt {
+        width: 80%;
+        margin-right: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .historia {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .historiaImg {
+        img {
+            width: $w-40;
+        }
+    }
+    .historiaTxt {
+        padding-inline: 20px;
+    }
 }
 
 // --> style: pedidos.html <-- //
@@ -189,7 +242,7 @@ body {
     ul {
         list-style: none;
         padding-left: 0px;
-        font-size: 1em;
+        font-size: 0.9em;
     }
 }
 
@@ -199,7 +252,7 @@ body {
         align-content: center;
     }
     .clientes {
-        @include flex(row, auto, auto, auto);
+        @include flex(row, auto, space-between, auto);
         text-align: start;
         width: 700px;
         border: double;
@@ -207,6 +260,12 @@ body {
             padding-left: 20px;
 			padding-right: 10px;
         }
+    }
+    .clientesInfo {
+        width: $w-25;
+    }
+    .clientesInfo {
+        width: $w-75;
     }
 }
 
@@ -253,8 +312,6 @@ body {
         }
     }
 }
-
-
 .card {
     margin: 2%;
     img {
@@ -292,5 +349,17 @@ body {
     }
     .card-desayunos {
         width: $w-50;
+    }
+}
+
+// --> style: ERROR404.html <-- //
+.errorContenedor {
+    @include flex(column, auto, center, center);
+}
+
+
+@media screen and (min-width: 768px) {
+    .errorContenedor {
+        @include flex(row, auto, center, center);
     }
 }
