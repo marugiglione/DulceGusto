@@ -41,9 +41,9 @@
     }
     .navItems {
         background-image: linear-gradient(currentColor, currentColor);
-        background-position: 10% 90%;
+        background-position: 20% 90%;
         &:hover{
-            background-size: 90% 2px;
+            background-size: 100% 2px;
         }
     }
 }

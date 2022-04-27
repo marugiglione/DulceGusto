@@ -26,9 +26,9 @@
     width: 250px; }
   .navItems {
     background-image: linear-gradient(currentColor, currentColor);
-    background-position: 10% 90%; }
+    background-position: 20% 90%; }
     .navItems:hover {
-      background-size: 90% 2px; } }
+      background-size: 100% 2px; } }
 
 body {
   background-color: rgba(213, 248, 236, 0.9);
